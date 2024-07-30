@@ -5,18 +5,24 @@ This is WIP fork of [Clifford Group Equivariant Networks (NeurIPS 2023 Oral)](ht
 This is built on a base of 2D Conformal Geometric Algebra BUT we are forcibly restricting to a subset of that - ordinary CGA has lots of stuff that is *not* interesting for computer vision, such as circle inversions, vortex pairs, and hyperbolic translations, because they are not the sorts of transformations that occur with cameras.
 
 2D CGA is Cl(3,1) and has 16 basis k-vectors:
-$$\newline 1, e_1, e_2, e_3, e_4, e_{12}, e_{13}, e_{14}, e_{23}, e_{24}, e_{34}, e_{123}, e_{124}, e_{134}, e_{234}, e_{1234}$$
+
+$ 1, e_1, e_2, e_3, e_4, e_{12}, e_{13}, e_{14}, e_{23}, e_{24}, e_{34}, e_{123}, e_{124}, e_{134}, e_{234}, e_{1234}$
 
 People sometimes say that CGA is the algebra of rotations, translations, and scalings. **This is diabolically incorrect**, again CGA has circle inversions and hyperbolic translations - yes, it does have rotations/translations/scalings but they make up literally 0% of its full set of transformations.
 
 So. The system we use here to accomplish the thing CGA says it accomplishes has exactly 12 basis vectors:
-$$\newline 1, e_1, e_2, e_0, e_{12}, e_{10}, e_{20}, e_{34}, e_{120}, e_{134}, e_{234}, e_{1234}$$
+
+$ 1, e_1, e_2, e_0, e_{12}, e_{10}, e_{20}, e_{34}, e_{120}, e_{134}, e_{234}, e_{1234}$
 
 Where:
-$$\newline e_0 := e_3+e_4 \newline
-e_{10} := e_{13} + e_{14} \newline
-e_{20} := e_{23} + e_{24} \newline
-e_{120} := e_{123} + e_{124}$$
+
+$e_0 := e_3+e_4$
+
+$e_{10} := e_{13} + e_{14}$
+
+$e_{20} := e_{23} + e_{24}$
+
+$e_{120} := e_{123} + e_{124}$
 
 If you have a heavily trained eye (get in touch!) you will spy the embedding of Projective GA in CGA, but it's been fused with some other stuff descending from $e_{34}$ - and indeed, that's the part that does scalings (and reflection-scalings, and rotation-scalings).
 

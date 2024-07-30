@@ -6,13 +6,13 @@ This is built on a base of 2D Conformal Geometric Algebra BUT we are forcibly re
 
 2D CGA is Cl(3,1) and has 16 basis k-vectors:
 
-$ 1, e_1, e_2, e_3, e_4, e_{12}, e_{13}, e_{14}, e_{23}, e_{24}, e_{34}, e_{123}, e_{124}, e_{134}, e_{234}, e_{1234}$
+$1, e_1, e_2, e_3, e_4, e_{12}, e_{13}, e_{14}, e_{23}, e_{24}, e_{34}, e_{123}, e_{124}, e_{134}, e_{234}, e_{1234}$
 
 People sometimes say that CGA is the algebra of rotations, translations, and scalings. **This is diabolically incorrect**, again CGA has circle inversions and hyperbolic translations - yes, it does have rotations/translations/scalings but they make up literally 0% of its full set of transformations.
 
 So. The system we use here to accomplish the thing CGA says it accomplishes has exactly 12 basis vectors:
 
-$ 1, e_1, e_2, e_0, e_{12}, e_{10}, e_{20}, e_{34}, e_{120}, e_{134}, e_{234}, e_{1234}$
+$1, e_1, e_2, e_0, e_{12}, e_{10}, e_{20}, e_{34}, e_{120}, e_{134}, e_{234}, e_{1234}$
 
 Where:
 

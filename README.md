@@ -24,7 +24,7 @@ $e_{20} := e_{23} + e_{24}$
 
 $e_{120} := e_{123} + e_{124}$
 
-If you have a heavily trained eye (get in touch!) you will spy the embedding of Projective GA in CGA, but it's been fused with some other stuff descending from $e_{34}$ - and indeed, that's the part that does scalings (and reflection-scalings, and rotation-scalings).
+If you have a heavily trained eye (get in touch!) you will spy the embedding of Projective GA in CGA, but it's been fused with some other stuff descending from $e_{34}$ - and indeed, that's the part that does scalings (and reflection-scalings, and rotation-scalings). There are absolutely no circles/spheres to be seen here, just lines. There are point pairs in a sense, but one of the points is always the point at infinity.
 
 12 is a disturbingly unusual number of basis k-vectors. But note that it is a subgroup of CGA - in fact we can go further, it is a subalgebra. It may not look like one - part of you looks at $e_{34}$ and friends and think "Surely I can break that into e3 and e4 and get all the rest of CGA" - not with this set of k-vectors and versors you can't! Which makes sense geometrically: this is the set of all transformations that leave the plane at infinity where it is. And if you want to be really abstract, you could say that it is a system with enough "basis directions" to let you do these transformations, where $e_{34}$ is somehow a basis direction in "scale space" which PGA does not have.
 

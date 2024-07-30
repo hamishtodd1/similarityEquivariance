@@ -1,7 +1,7 @@
 # Similarity-equivariant neural networks
-This is WIP fork of [Clifford Group Equivariant Networks (NeurIPS 2023 Oral)](https://arxiv.org/abs/2305.11141), focussed on rotation/translation/scale equivariance
+This is WIP fork of [Clifford Group Equivariant Networks (NeurIPS 2023 Oral)](https://arxiv.org/abs/2305.11141), focussed on rotation/translation/scale equivariance. This research was done at the Lasenby Lab in the Cambridge engineering department and is a joint work with https://github.com/YuxinYao620
 
-## How do you do scaling/rotation/translation with Geometric Algebra?
+## Scaling/rotation/translation with Geometric Algebra?
 This is built on a base of 2D Conformal Geometric Algebra BUT we are forcibly restricting to a subset of that - ordinary CGA has lots of stuff that is *not* interesting for computer vision, such as circle inversions, vortex pairs, and hyperbolic translations, because they are not the sorts of transformations that occur with cameras.
 
 2D CGA is Cl(3,1) and has 16 basis k-vectors:

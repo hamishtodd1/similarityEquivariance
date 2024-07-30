@@ -26,7 +26,9 @@ $e_{120} := e_{123} + e_{124}$
 
 If you have a heavily trained eye (get in touch!) you will spy the embedding of Projective GA in CGA, but it's been fused with some other stuff descending from $e_{34}$ - and indeed, that's the part that does scalings (and reflection-scalings, and rotation-scalings).
 
-12 is a disturbingly unusual number of basis k-vectors. But note that it is a subgroup of CGA - in fact we can go further, it is a subalgebra. You can think of it as the set of all transformations that leave the plane at infinity where it is. Conceptually you could say that it is a system with enough "basis directions" to let you do these transformations, where $e_{34}$ is somehow a basis direction in "scale space".
+12 is a disturbingly unusual number of basis k-vectors. But note that it is a subgroup of CGA - in fact we can go further, it is a subalgebra. It may not look like one - part of you looks at $e_{34}$ and friends and think "Surely I can break that into e3 and e4 and get all the rest of CGA" - not with this set of k-vectors and versors you can't! Which makes sense geometrically: this is the set of all transformations that leave the plane at infinity where it is. And if you want to be really abstract, you could say that it is a system with enough "basis directions" to let you do these transformations, where $e_{34}$ is somehow a basis direction in "scale space" which PGA does not have.
+
+For this reason I thought of renaming $e_{34}$ to $e_{s}$ or something... but that's a terrible idea, because it's still grade 2. In general I find it easier to use the notation $e_{+-}$ but I'm sparing you that for this introduction.
 
 ## Why would you put this in a neural network?
 The general justification for the success of convolutional NNs is that it shouldn't matter where, in an image, an object appears - so it's helpful (eg: makes your data go further) to "bake in" translation invariance. You do this by having your architecture be based on convolution kernels
@@ -47,6 +49,8 @@ In PGA people are quick to point out the beautiful fact that rotations are alway
 It turns out that there are two kinds of points in 2D Similarity GA: rotation-points like e12, and scaling-points, like e34 - both those examples are points at the origin. One of them you can imagine with an arrow going around it, one with an arrow towards it. This turns out to perfectly realize Leo Dorst's idea of oriented geometry. Yes, they are dual, in the ordinary CGA sense.
 
 What about the trivectors? They're lines (as are the 1-vectors). But there not reflection-lines, they're actually involved in "scale-reflection" transforms. For example, 1.25e1 + 0.75e134 = e1(1.25+0.75e34) is a scaling toward e34 (the part in brackets) followed by a reflection in e1. Alright, how about 1.25e1 + 2.5e0 + 0.75e134? That's also a scale-reflection, but it is a reflection in the line e1+2e0, followed by a scaling towards a different point. In general, when e134 is the trivector part, the scaling will be towards a point lying on the line e2, which is dual to e134. Consequently, if you have e134 on its own (though that makes no sense from a transformations point of view), it's sort of a scaling-line - it's a line that is made up of lots of little scaling-points.
+
+It also has non-trivial projectors and spinors; I have some ideas for using these.
 
 ## Projective transformation (will not be found here!)
 In addition to distance from a camera, the *angle* from the camera of an object can change too, changing its appearance. This brings in a wider class of transformations called projective transformations. However, it seems to me that projective transformations involve a degree of "revealing something in an object which you couldn't originally see in the picture." Maybe that's fine for neural networks
